@@ -14,8 +14,8 @@ func main() {
 	http.HandleFunc("/api/echo", api.EchoHandleFunc)
 	http.HandleFunc("/api/hello", api.HelloHandleFunc)
 
-	http.HandleFunc("/api/books", api.BooksHandleFunc)
-	http.HandleFunc("/api/books/", api.BookHandleFunc)
+	http.HandleFunc("/api/manga", api.ListOfMangaHandleFunc)
+	http.HandleFunc("/api/manga/", api.MangaHandleFunc)
 	log.Println("Server run at port ", port())
 	http.ListenAndServe(port(), nil)
 }
